@@ -106,12 +106,12 @@ didFinishParsingDepartures:(NSArray*)departureDictionaries
 #pragma mark -
 #pragma mark UITableView Data Source
 
-- (int)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return [stations count];
 }
 
-- (int)tableView:(UITableView *)table 
+- (NSInteger)tableView:(UITableView *)table
   numberOfRowsInSection:(NSInteger)section
 {
 	if(![[stationsDepartures objectAtIndex:section] isKindOfClass:[NSArray class]]) return 1;
