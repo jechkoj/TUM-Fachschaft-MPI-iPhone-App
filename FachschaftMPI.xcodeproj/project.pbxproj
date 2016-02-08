@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */; };
+		0FEBAC8F1C6927AF00522691 /* U8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC8E1C6927AF00522691 /* U8.gif */; };
+		0FEBAC911C6927B500522691 /* U7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC901C6927B500522691 /* U7.gif */; };
 		1D3623260D0F684500981E51 /* FSMPIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -86,6 +88,8 @@
 
 /* Begin PBXFileReference section */
 		0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FachschaftMPI.entitlements; sourceTree = "<group>"; };
+		0FEBAC8E1C6927AF00522691 /* U8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U8.gif; sourceTree = "<group>"; };
+		0FEBAC901C6927B500522691 /* U7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U7.gif; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* FSMPIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMPIAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMPIAppDelegate.m; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				390464C2121F33D700D62C52 /* U4.gif */,
 				390464C3121F33D700D62C52 /* U5.gif */,
 				390464C4121F33D700D62C52 /* U6.gif */,
+				0FEBAC901C6927B500522691 /* U7.gif */,
+				0FEBAC8E1C6927AF00522691 /* U8.gif */,
 			);
 			name = MVGIcons;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				7ED5C475121CF765006A25C7 /* link_roomfinder.png in Resources */,
 				7ED5C476121CF765006A25C7 /* link_tumonline.png in Resources */,
 				390464C5121F33D700D62C52 /* U1.gif in Resources */,
+				0FEBAC911C6927B500522691 /* U7.gif in Resources */,
 				390464C6121F33D700D62C52 /* U2.gif in Resources */,
 				390464C7121F33D700D62C52 /* U3.gif in Resources */,
 				390464C8121F33D700D62C52 /* U4.gif in Resources */,
@@ -506,6 +513,7 @@
 				3907E10D13699664000E9247 /* link_matum.png in Resources */,
 				3907E10E13699664000E9247 /* link_phtum.png in Resources */,
 				3907E1101369966C000E9247 /* link_grundstudium.png in Resources */,
+				0FEBAC8F1C6927AF00522691 /* U8.gif in Resources */,
 				3907E1121369971D000E9247 /* link_studentenwerk.png in Resources */,
 				390DB292137D3BD600E2B805 /* canteens.plist in Resources */,
 				390DB295137D503600E2B805 /* canteen_loske.png in Resources */,
