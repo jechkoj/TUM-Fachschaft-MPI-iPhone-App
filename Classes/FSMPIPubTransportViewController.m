@@ -22,6 +22,7 @@ const NSTimeInterval kDepartureUpdateInterval = 10; // Interval for updating the
 	numberOfParsersInProgress = 0;
 	didInitialLoad = NO;
 	didShowErrorAlertView = NO;
+    [self setTitle:NSLocalizedString(@"Subway", @"Subway title")];
     [super viewDidLoad];
 }
 
@@ -189,7 +190,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 #pragma mark -
 #pragma mark IBOutlets
 
-- (IBAction)reloadButtonTapped
+
+-(IBAction)refreshButtonTapped:(id)sender
 {
 	[self reloadDepartures];
 }

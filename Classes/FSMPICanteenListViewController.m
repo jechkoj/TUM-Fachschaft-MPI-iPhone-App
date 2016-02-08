@@ -12,7 +12,6 @@
     canteens = [[NSArray alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]];
     [self setTitle:NSLocalizedString(@"Canteens", @"Canteen list title")];
     NSLog(@"%@", NSLocalizedString(@"Canteens", @"Canteen list title"));
-    //[self setTitle:@"Foo"];
 }
 
 -(void)viewWillAppear:(BOOL)animated

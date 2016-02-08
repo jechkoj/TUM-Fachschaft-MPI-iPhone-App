@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */; };
 		1D3623260D0F684500981E51 /* FSMPIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -84,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FachschaftMPI.entitlements; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* FSMPIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMPIAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMPIAppDelegate.m; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 		39369B43121EAF9200AD9866 /* FSMPIMVGParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMPIMVGParser.m; sourceTree = "<group>"; };
 		393915D21222E16200411491 /* FSMPINewsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMPINewsParser.h; sourceTree = "<group>"; };
 		393915D31222E16200411491 /* FSMPINewsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMPINewsParser.m; sourceTree = "<group>"; };
-		395B97A21497A05200DC9F61 /* FachschaftMPI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FachschaftMPI.entitlements; sourceTree = "<group>"; };
 		396DF2ED13CF6C5D00513C88 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FSMPIClockView.xib; sourceTree = "<group>"; };
 		396DF2EF13CF6C5D00513C88 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FSMPIFMICanteenView.xib; sourceTree = "<group>"; };
 		396DF2F113CF6C5D00513C88 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FSMPIMensaView.xib; sourceTree = "<group>"; };
@@ -224,7 +225,7 @@
 		29B97314FDCFA39411CA2CEA /* FachschaftMPI */ = {
 			isa = PBXGroup;
 			children = (
-				395B97A21497A05200DC9F61 /* FachschaftMPI.entitlements */,
+				0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -493,6 +494,7 @@
 				390464CA121F33D700D62C52 /* U6.gif in Resources */,
 				3904659C121F450F00D62C52 /* 12.gif in Resources */,
 				3904659D121F451000D62C52 /* 100.gif in Resources */,
+				0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */,
 				3904659E121F451000D62C52 /* N27.gif in Resources */,
 				390465A5121F454B00D62C52 /* 23.gif in Resources */,
 				39BFD2A812201C3300155D97 /* 27.gif in Resources */,
@@ -632,8 +634,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = FachschaftMPI.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jechkoj@gmail.com (PL4YL6W7ZQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -643,8 +644,8 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "FachschaftMPI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.fs.mpi.publish.tumfsmpi;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.home.zhechev.fmpi;
 				PRODUCT_NAME = FachschaftMPI;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -658,8 +659,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = FachschaftMPI.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jechkoj@gmail.com (PL4YL6W7ZQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -667,8 +667,8 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "FachschaftMPI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.fs.mpi.publish.tumfsmpi;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.home.zhechev.fmpi;
 				PRODUCT_NAME = FachschaftMPI;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -720,7 +720,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = FachschaftMPI.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jechkoj@gmail.com (PL4YL6W7ZQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -728,8 +728,8 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "FachschaftMPI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tum.fs.mpi.publish.tumfsmpi;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.home.zhechev.fmpi;
 				PRODUCT_NAME = FachschaftMPI;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

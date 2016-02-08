@@ -20,7 +20,7 @@ const NSUInteger kFutureDatesParsed = 3;
 - (void)parseReceivedData:(NSData*)data
 {
 	TFHpple *xPathParser = [[TFHpple alloc] initWithHTMLData:data];
-	NSArray *elements = [xPathParser search:@"//table[@class='menu']/tr/td[@class='gericht']|//table[@class='menu']/tr/td[@class='beschreibung']/span|//table[@class='menu']/tr/td[@class='headline']/span/a/strong"];
+    NSArray *elements = [xPathParser search:@"//table[@class='menu']/tr/td[@class='gericht']|//table[@class='menu']/tr/td[@class='beschreibung']/span|//table[@class='menu']/tr/td[@class='headline']/span/a/strong"];
 	NSMutableArray *dates = [[NSMutableArray alloc] init];
     NSMutableArray *menus;
 	NSMutableDictionary *menuItem;
@@ -33,8 +33,8 @@ const NSUInteger kFutureDatesParsed = 3;
 	[dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
 	[dateFormatter setDateFormat:@"dd.MM.yyyy"];
 	
-	@try {
-		for(TFHppleElement *element in elements){			
+    @try {
+		for(TFHppleElement *element in elements){
 			if([[element tagName] isEqualToString:@"strong"]){
 				// Parse date
 				NSString *dateString = [element content];
@@ -60,7 +60,7 @@ const NSUInteger kFutureDatesParsed = 3;
 			if([[element tagName] isEqualToString:@"td"] && !skipDate){
 				foundDescription = NO;
 				menuItem = [[NSMutableDictionary alloc] init];
-				[menuItem setObject:[element content] forKey:@"meal"];
+                [menuItem setObject:[[[element node] objectForKey: @"nodeChildArray"][0] objectForKey: @"nodeContent"] forKey:@"meal"];
 			}
 			if([[element tagName] isEqualToString:@"span"] && !foundDescription && !skipDate){
 				foundDescription = YES;
@@ -72,8 +72,7 @@ const NSUInteger kFutureDatesParsed = 3;
         if(dateContainer != nil) [dateContainer setObject:menus forKey:@"dishes"];
 		
         [delegate mensaParser:self didFinishParsingMenu:dates forMensaID:requestedMensaID];
-	}
-	@catch (NSException * e) {
+    } @catch (NSException * e) {
 		// Something went wrong during HTML parsing (this might be a change to the website!)
 		NSString *errorString = [NSString stringWithFormat:NSLocalizedString(@"Parsing failed: %@", @"Mensa parser failure"), [e description]];
 		NSMutableDictionary *errorDetail = [NSMutableDictionary dictionaryWithObject:errorString forKey:NSLocalizedDescriptionKey];

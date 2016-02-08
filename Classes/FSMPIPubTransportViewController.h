@@ -9,7 +9,6 @@
 <FSMPIMVGParserDelegate, UITableViewDelegate, UITableViewDataSource>
 {
 	IBOutlet UITableView *departuresTableView;
-	IBOutlet UIBarButtonItem *refreshButton;
 	IBOutlet UITableViewCell *currentCell;
 	
 	NSArray *stations;
@@ -22,10 +21,10 @@
 }
 
 @property (strong) IBOutlet UITableView* departuresTableView;
-@property (strong) IBOutlet UIBarButtonItem *refreshButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *refreshButton;
 @property (strong) IBOutlet UITableViewCell *currentCell;
 @property (strong) NSTimer *reloadTimer;
 
+-(IBAction)refreshButtonTapped:(id)sender;
 - (void)reloadDepartures;
-- (IBAction)reloadButtonTapped;
 @end

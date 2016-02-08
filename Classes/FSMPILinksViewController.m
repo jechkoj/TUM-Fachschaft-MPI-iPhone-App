@@ -19,6 +19,8 @@ const CGFloat kLinkCellHeight = 64;
 	if(![self.languageCode isEqualToString:@"en"] && ![self.languageCode isEqualToString:@"de"] && ![self.languageCode isEqualToString:@"fr"]) self.languageCode = @"en";
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"links" ofType:@"plist"];
 	self.links = [[NSArray alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]];
+    [self setTitle:NSLocalizedString(@"Links", @"Links title")];
+    [super viewDidLoad];
 }
 
 #pragma mark -

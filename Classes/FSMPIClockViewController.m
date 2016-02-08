@@ -29,6 +29,7 @@ clockTutorialViewController, clockTutorialWebView;
 	[self setupClock];
 	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"tutorial" ofType:@"html"]];
 	[self.clockTutorialWebView loadRequest:[NSURLRequest requestWithURL:url]];
+    [self setTitle:NSLocalizedString(@"Abakus", @"Abakus title")];
     [super viewDidLoad];
 }
 
