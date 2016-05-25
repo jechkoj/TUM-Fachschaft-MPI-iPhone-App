@@ -14,7 +14,18 @@ const NSUInteger kFutureDatesParsed = 3;
 	NSString *menuURLString = [NSString stringWithFormat:@"http://www.studentenwerk-muenchen.de/mensa/speiseplan/speiseplan_%@_-de.html", mensaID];
 	NSURL *menuURL = [NSURL URLWithString:menuURLString];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:menuURL];
-	connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self startImmediately:YES];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      // Check if an error occured
+                                      if (error != nil) {
+                                          [delegate mensaParser:self didFailWithError:error forMensaID:requestedMensaID];
+                                          return;
+                                      }
+                                      [self parseReceivedData:data];
+                                  }];
+    [task resume];
 }
 
 - (void)parseReceivedData:(NSData*)data
@@ -70,8 +81,9 @@ const NSUInteger kFutureDatesParsed = 3;
 			}
 		}
         if(dateContainer != nil) [dateContainer setObject:menus forKey:@"dishes"];
-		
-        [delegate mensaParser:self didFinishParsingMenu:dates forMensaID:requestedMensaID];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [delegate mensaParser:self didFinishParsingMenu:dates forMensaID:requestedMensaID];
+        });
     } @catch (NSException * e) {
 		// Something went wrong during HTML parsing (this might be a change to the website!)
 		NSString *errorString = [NSString stringWithFormat:NSLocalizedString(@"Parsing failed: %@", @"Mensa parser failure"), [e description]];
@@ -116,30 +128,4 @@ const NSUInteger kFutureDatesParsed = 3;
     }
 }
 
-
-#pragma mark -
-#pragma mark NSURLConnection Delegate
-
-- (void)connection:(NSURLConnection *)connection 
-didReceiveResponse:(NSURLResponse *)response
-{
-	receivedData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection 
-	didReceiveData:(NSData *)data
-{
-	[receivedData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)aconnection
-  didFailWithError:(NSError *)connectionError
-{
-	[delegate mensaParser:self didFailWithError:connectionError forMensaID:requestedMensaID];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)aconnection
-{
-	[self parseReceivedData:receivedData];
-}
 @end

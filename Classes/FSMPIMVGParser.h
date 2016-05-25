@@ -18,9 +18,7 @@
 @interface FSMPIMVGParser : NSObject
 //<NSXMLParserDelegate>
 {
-	NSMutableData *receivedData;
 	NSString *requestedStationName;
-	NSURLConnection *connection;
 	id<FSMPIMVGParserDelegate>__unsafe_unretained delegate;
 }
 
@@ -31,10 +29,5 @@
 - (void)requestDeparturesForStation:(NSString*)stationName;
 // Parses the data from the server
 - (void)parseReceivedData:(NSData*)data;
-
-// NSURLConnection Delegate
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 
 @end

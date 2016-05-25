@@ -10,7 +10,21 @@
 	NSString *urlString = @"http://mpi.fs.tum.de/fsmpi/RSS";
 	NSURL *url = [NSURL URLWithString:urlString];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-	urlConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self startImmediately:YES];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      // Check if an error occured
+                                      if (error != nil) {
+                                          [self.delegate newsParser:self didFailWithError:error];
+                                          return;
+                                      }
+                                      if([data length] > 0){
+                                          [self parseReceivedData:data];
+                                      }
+                                  }];
+    [task resume];
 }
 
 - (void)parseReceivedData:(NSData*)data
@@ -74,37 +88,9 @@ foundCharacters:(NSString *)string
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-	[self.delegate newsParserDidFinishParsing:self];
-}
-
-#pragma mark URLConnection Delegate
-
-- (void)connection:(NSURLConnection *)connection 
-didReceiveResponse:(NSURLResponse *)response
-{
-	receivedData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection 
-	didReceiveData:(NSData *)data
-{
-	[receivedData appendData:data];
-	//NSLog(@"Received more data: %d\n", [data length]);
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    if([receivedData length] > 0){
-        [self parseReceivedData:receivedData];
-    }else{
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection 
-  didFailWithError:(NSError *)error
-{
-	//NSLog(@"News parser error: %s", [error description]);
-	[self.delegate newsParser:self didFailWithError:error];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.delegate newsParserDidFinishParsing:self];
+    });
 }
 
 @end

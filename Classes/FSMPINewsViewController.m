@@ -67,13 +67,23 @@ const CGFloat kNewsCellHeight = 109;
 	loadingNewsItems = NO;
 	if(!didShowErrorAlertView){
 		didShowErrorAlertView = YES;
-		UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error alert view title") 
-															 message:[error localizedDescription] 
-															delegate:nil
-												   cancelButtonTitle:NSLocalizedString(@"Dismiss", @"Error alert dismiss button label")  
-												   otherButtonTitles:nil];
-		[errorAlert show];
-	}
+        
+        UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Error alert view title")
+                                                                            message:[error localizedDescription]
+                                                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle:NSLocalizedString(@"Dismiss", @"Error alert dismiss button label")
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [errorAlert dismissViewControllerAnimated:YES completion:nil];
+                                     
+                                 }];
+        
+        [errorAlert addAction:cancel];
+        [self presentViewController:errorAlert animated:YES completion:nil];
+    }
 }
 
 #pragma mark -

@@ -14,10 +14,7 @@
 
 @interface FSMPINewsParser : NSObject 
 <NSXMLParserDelegate>
-{
-	NSURLConnection *urlConnection;
-	NSMutableData *receivedData;
-	
+{	
 	NSXMLParser *xmlParser;
 	NSMutableDictionary *currentNewsItem;
 	NSString *currentNewsItemKey;
@@ -34,8 +31,4 @@
 - (void)loadAndParseNews;
 - (void)parseReceivedData:(NSData*)data;
 
-// NSURLConnection Delegate
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 @end

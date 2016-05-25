@@ -16,8 +16,6 @@
 
 @interface FSMPIMensaParser : NSObject {
 	NSString *requestedMensaID;
-	NSMutableData *receivedData;
-	NSURLConnection *connection;
 	id<FSMPIMensaParserDelegate> __unsafe_unretained delegate;
 }
 

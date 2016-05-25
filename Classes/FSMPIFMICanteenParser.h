@@ -18,8 +18,6 @@
 <NSXMLParserDelegate>
 {
 	NSString *requestedCanteenID;
-	NSMutableData *receivedData;
-	NSURLConnection *connection;
     NSXMLParser *xmlParser;
     NSDateFormatter *dateFormatter;
     NSMutableArray *menu;

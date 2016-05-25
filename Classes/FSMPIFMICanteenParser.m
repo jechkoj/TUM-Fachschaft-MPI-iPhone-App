@@ -24,7 +24,21 @@ const NSUInteger kFutureCanteenDatesParsed = 5;
 	NSString *menuURLString = [NSString stringWithFormat:@"http://apps.interface-group.eu/mensa/%@.xml", canteenID];
 	NSURL *menuURL = [NSURL URLWithString:menuURLString];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:menuURL];
-	connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self startImmediately:YES];
+ 
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      // Check if an error occured
+                                      if (error != nil) {
+                                          [delegate canteenParser:self didFailWithError:error forCanteenID:self.requestedCanteenID];
+                                          return;
+                                      }
+                                      if([data length] > 0){
+                                          [self parseReceivedData:data];
+                                      }
+                                  }];
+    [task resume];
 }
 
 - (void)parseReceivedData:(NSData*)data
@@ -144,32 +158,4 @@ foundCharacters:(NSString *)string
     }
 }
 
-#pragma mark -
-#pragma mark NSURLConnection Delegate
-
-- (void)connection:(NSURLConnection *)connection 
-didReceiveResponse:(NSURLResponse *)response
-{
-	receivedData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection 
-	didReceiveData:(NSData *)data
-{
-	[receivedData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)aconnection
-  didFailWithError:(NSError *)connectionError
-{
-	[delegate canteenParser:self didFailWithError:connectionError forCanteenID:self.requestedCanteenID];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)aConnection
-{
-    if([receivedData length] > 0){
-        [self parseReceivedData:receivedData];
-    }else{
-    }
-}
 @end

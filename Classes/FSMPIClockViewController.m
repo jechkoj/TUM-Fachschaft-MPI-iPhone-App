@@ -96,8 +96,8 @@ clockTutorialViewController, clockTutorialWebView;
 - (void)updateClockAnimated:(BOOL)shouldAnimate
 {
 	NSDate *now = [NSDate date];
-	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-	NSDateComponents *timeComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:now];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
+	NSDateComponents *timeComponents = [calendar components:(NSCalendarUnitHour| NSCalendarUnitMinute) fromDate:now];
 	[self arrangeClockForHours:[timeComponents hour] minutes:[timeComponents minute] animated:shouldAnimate];
 	// Update the time label below the clock
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -146,12 +146,12 @@ clockTutorialViewController, clockTutorialWebView;
 - (IBAction)showClockTutorial
 {
 	[self.clockTutorialViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-	[self presentModalViewController:self.clockTutorialViewController animated:YES];
+    [self presentViewController:clockTutorialViewController animated:YES completion:nil];
 }
 
 - (IBAction)hideClockTutorial
 {
-	[self.clockTutorialViewController dismissModalViewControllerAnimated:YES];
+    [clockTutorialViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 -			 (BOOL)webView:(UIWebView *)webView 

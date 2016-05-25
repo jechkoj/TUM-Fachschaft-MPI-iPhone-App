@@ -22,7 +22,18 @@ const int kMaxDeparturesPerStation = 4;
 	NSString *urlString = [NSString stringWithFormat:urlFormatString, urlEncodedStationName];
 	NSURL *url = [NSURL URLWithString:urlString];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-	connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self startImmediately:YES];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      // Check if an error occured
+                                      if (error != nil) {
+                                          [delegate mvgParser:self didFailWithError:error];
+                                              return;
+                                      }
+                                      [self parseReceivedData:data];
+                                  }];
+    [task resume];
 }
 
 - (void)parseReceivedData:(NSData*)data
@@ -51,7 +62,9 @@ const int kMaxDeparturesPerStation = 4;
 			}
 			if(departureCount == kMaxDeparturesPerStation) break;
 		}
-		[delegate mvgParser:self didFinishParsingDepartures:departures forStation:requestedStationName];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [delegate mvgParser:self didFinishParsingDepartures:departures forStation:requestedStationName];
+        });
 	}
 	@catch (NSException * e) {
 		// Something went wrong during HTML parsing (this might be change to the website!)
@@ -60,34 +73,6 @@ const int kMaxDeparturesPerStation = 4;
 		NSError *error = [NSError errorWithDomain:@"mvg_parser" code:2 userInfo:errorDetail];
 		[delegate mvgParser:self didFailWithError:error];
 	}
-	@finally {
-	}
 }
 
-#pragma mark -
-#pragma mark NSURLConnection Delegate
-
-- (void)connection:(NSURLConnection *)connection 
-didReceiveResponse:(NSURLResponse *)response
-{
-	// Reset received data store
-	receivedData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection 
-	didReceiveData:(NSData *)data
-{
-	[receivedData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)aconnection
-  didFailWithError:(NSError *)error
-{
-	[delegate mvgParser:self didFailWithError:error];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)aconnection
-{
-	[self parseReceivedData:receivedData];
-}
 @end
