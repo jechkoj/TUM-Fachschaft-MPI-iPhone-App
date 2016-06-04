@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */; };
+		0FB89C0C1D02E8B0000E25E4 /* 28.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FB89C0B1D02E8B0000E25E4 /* 28.gif */; };
 		0FEBAC8F1C6927AF00522691 /* U8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC8E1C6927AF00522691 /* U8.gif */; };
 		0FEBAC911C6927B500522691 /* U7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC901C6927B500522691 /* U7.gif */; };
 		1D3623260D0F684500981E51 /* FSMPIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */; };
@@ -88,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FachschaftMPI.entitlements; sourceTree = "<group>"; };
+		0FB89C0B1D02E8B0000E25E4 /* 28.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 28.gif; sourceTree = "<group>"; };
 		0FEBAC8E1C6927AF00522691 /* U8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U8.gif; sourceTree = "<group>"; };
 		0FEBAC901C6927B500522691 /* U7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U7.gif; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -296,6 +298,7 @@
 		390464BE121F33C700D62C52 /* MVGIcons */ = {
 			isa = PBXGroup;
 			children = (
+				0FB89C0B1D02E8B0000E25E4 /* 28.gif */,
 				39046599121F450F00D62C52 /* 12.gif */,
 				39BFD2A712201C3300155D97 /* 27.gif */,
 				3904659A121F450F00D62C52 /* 100.gif */,
@@ -527,6 +530,7 @@
 				396DF2FA13CF6C5D00513C88 /* FSMPIMensaView.xib in Resources */,
 				396DF2FB13CF6C5D00513C88 /* FSMPINewsView.xib in Resources */,
 				396DF2FC13CF6C5D00513C88 /* FSMPIPubTransportCell.xib in Resources */,
+				0FB89C0C1D02E8B0000E25E4 /* 28.gif in Resources */,
 				396DF2FD13CF6C5D00513C88 /* MainWindow.xib in Resources */,
 				39FE6F261611019900F5E7DA /* Default-568h@2x.png in Resources */,
 			);
