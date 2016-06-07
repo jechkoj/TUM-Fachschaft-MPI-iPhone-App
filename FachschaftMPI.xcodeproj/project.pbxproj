@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */; };
 		0FB89C0C1D02E8B0000E25E4 /* 28.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FB89C0B1D02E8B0000E25E4 /* 28.gif */; };
+		0FCC1DD01D05F4130005D9D4 /* 150.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC1DCF1D05F4130005D9D4 /* 150.gif */; };
 		0FEBAC8F1C6927AF00522691 /* U8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC8E1C6927AF00522691 /* U8.gif */; };
 		0FEBAC911C6927B500522691 /* U7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC901C6927B500522691 /* U7.gif */; };
 		1D3623260D0F684500981E51 /* FSMPIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */; };
@@ -90,6 +91,7 @@
 /* Begin PBXFileReference section */
 		0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FachschaftMPI.entitlements; sourceTree = "<group>"; };
 		0FB89C0B1D02E8B0000E25E4 /* 28.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 28.gif; sourceTree = "<group>"; };
+		0FCC1DCF1D05F4130005D9D4 /* 150.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 150.gif; sourceTree = "<group>"; };
 		0FEBAC8E1C6927AF00522691 /* U8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U8.gif; sourceTree = "<group>"; };
 		0FEBAC901C6927B500522691 /* U7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U7.gif; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -311,6 +313,7 @@
 				390464C3121F33D700D62C52 /* U5.gif */,
 				390464C4121F33D700D62C52 /* U6.gif */,
 				0FEBAC901C6927B500522691 /* U7.gif */,
+				0FCC1DCF1D05F4130005D9D4 /* 150.gif */,
 				0FEBAC8E1C6927AF00522691 /* U8.gif */,
 			);
 			name = MVGIcons;
@@ -507,6 +510,7 @@
 				0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */,
 				3904659E121F451000D62C52 /* N27.gif in Resources */,
 				390465A5121F454B00D62C52 /* 23.gif in Resources */,
+				0FCC1DD01D05F4130005D9D4 /* 150.gif in Resources */,
 				39BFD2A812201C3300155D97 /* 27.gif in Resources */,
 				3918774A125FF610005F24ED /* FSMPIMensaCell.xib in Resources */,
 				39FCBC8C13194E6C00768622 /* FSMPINewsCell.xib in Resources */,
