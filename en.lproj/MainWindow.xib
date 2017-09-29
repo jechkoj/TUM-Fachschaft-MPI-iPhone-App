@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
@@ -19,7 +24,7 @@
         <window opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </window>
         <tabBarController id="106">
@@ -28,12 +33,12 @@
             <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="107">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tabBar>
             <viewControllers>
                 <navigationController id="e4E-bx-lqZ" userLabel="Clock">
-                    <tabBarItem key="tabBarItem" title="Item" id="dMi-32-yNa"/>
+                    <tabBarItem key="tabBarItem" title="Abakus" image="tab_clock.png" id="dMi-32-yNa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NEW-Jm-NQP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -54,7 +59,7 @@
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="139">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.0039215688589999999" green="0.36862745879999997" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.033433392643928528" green="0.27785620093345642" blue="0.70404279232025146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <viewControllers>
                         <viewController title="News" nibName="FSMPINewsView" id="137" userLabel="News View Controller - News" customClass="FSMPINewsViewController">
@@ -96,8 +101,9 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Canteen" image="tab_mensa.png" id="148"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="145">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.0039215688589999999" green="0.36862745879999997" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.033433392643928528" green="0.27785620093345642" blue="0.70404279232025146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <viewControllers>
                         <viewController title="Canteens" id="155" customClass="FSMPICanteenListViewController">

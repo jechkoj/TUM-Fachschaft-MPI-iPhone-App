@@ -1,14 +1,14 @@
 #import "FSMPIClockViewController.h"
 
-const CGFloat kUpperBallTopOffset = 92;			// y distance of the upper balls
+const CGFloat kUpperBallTopOffset = 58;			// y distance of the upper balls
 const CGFloat kUpperBallMoveOffset = 28;		// y distance of down moved upper balls
-const CGFloat kLowerBallTopOffset = 189;		// y distance of highest lower ball
+const CGFloat kLowerBallTopOffset = 148;		// y distance of highest lower ball
 const CGFloat kLowerBallHoleOffset = 30;		// height of the hole between the lower balls
 const CGFloat kLowerBallMoveOffset = 42;		// distance between two balls in the lower half
-const CGFloat kBallLeftOffset = 61;				// x distance from the leftmost column
-const CGFloat kBallLeftStep = 52;				// x distance from the column to the left
-const CGFloat kBallShadowOversize = 13;			// additional pixels of the image arround the actual ball
-const CGFloat kBallSize = 67;					// scaled image size
+const CGFloat kBallLeftOffset = 60;				// x distance from the leftmost column
+const CGFloat kBallLeftStep = 50;				// x distance from the column to the left
+const CGFloat kBallShadowOversize = 20;			// additional pixels of the image arround the actual ball
+const CGFloat kBallSize = 60;					// scaled image size
 const CGFloat kBallMoveAnimationDuration = 0.5;	// duration of the ball movement animation
 const NSTimeInterval kClockUpdateInterval = 1;	// number of seconds between clock updates
 

@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */; };
-		0FB89C0C1D02E8B0000E25E4 /* 28.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FB89C0B1D02E8B0000E25E4 /* 28.gif */; };
-		0FCC1DD01D05F4130005D9D4 /* 150.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC1DCF1D05F4130005D9D4 /* 150.gif */; };
-		0FEBAC8F1C6927AF00522691 /* U8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC8E1C6927AF00522691 /* U8.gif */; };
-		0FEBAC911C6927B500522691 /* U7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FEBAC901C6927B500522691 /* U7.gif */; };
 		1D3623260D0F684500981E51 /* FSMPIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -90,10 +86,6 @@
 
 /* Begin PBXFileReference section */
 		0F9C687A1C681F9B00F4A696 /* FachschaftMPI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FachschaftMPI.entitlements; sourceTree = "<group>"; };
-		0FB89C0B1D02E8B0000E25E4 /* 28.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 28.gif; sourceTree = "<group>"; };
-		0FCC1DCF1D05F4130005D9D4 /* 150.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 150.gif; sourceTree = "<group>"; };
-		0FEBAC8E1C6927AF00522691 /* U8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U8.gif; sourceTree = "<group>"; };
-		0FEBAC901C6927B500522691 /* U7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = U7.gif; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* FSMPIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMPIAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* FSMPIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMPIAppDelegate.m; sourceTree = "<group>"; };
@@ -194,6 +186,10 @@
 		7ED5C472121CF765006A25C7 /* link_roomfinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = link_roomfinder.png; path = Resources/Images/link_roomfinder.png; sourceTree = "<group>"; };
 		7ED5C473121CF765006A25C7 /* link_tumonline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = link_tumonline.png; path = Resources/Images/link_tumonline.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* FachschaftMPI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FachschaftMPI-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D564C11E1F7EF5B90041667C /* U8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = U8.gif; path = Resources/Images/MVGIcons/U8.gif; sourceTree = "<group>"; };
+		D564C11F1F7EF5C20041667C /* 150.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 150.gif; path = Resources/Images/MVGIcons/150.gif; sourceTree = "<group>"; };
+		D564C1201F7EF5C90041667C /* U7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = U7.gif; path = Resources/Images/MVGIcons/U7.gif; sourceTree = "<group>"; };
+		D564C1211F7EF5D90041667C /* 28.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 28.gif; path = Resources/Images/MVGIcons/28.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,7 +296,6 @@
 		390464BE121F33C700D62C52 /* MVGIcons */ = {
 			isa = PBXGroup;
 			children = (
-				0FB89C0B1D02E8B0000E25E4 /* 28.gif */,
 				39046599121F450F00D62C52 /* 12.gif */,
 				39BFD2A712201C3300155D97 /* 27.gif */,
 				3904659A121F450F00D62C52 /* 100.gif */,
@@ -309,12 +304,13 @@
 				390464BF121F33D700D62C52 /* U1.gif */,
 				390464C0121F33D700D62C52 /* U2.gif */,
 				390464C1121F33D700D62C52 /* U3.gif */,
+				D564C1211F7EF5D90041667C /* 28.gif */,
 				390464C2121F33D700D62C52 /* U4.gif */,
+				D564C1201F7EF5C90041667C /* U7.gif */,
 				390464C3121F33D700D62C52 /* U5.gif */,
+				D564C11F1F7EF5C20041667C /* 150.gif */,
 				390464C4121F33D700D62C52 /* U6.gif */,
-				0FEBAC901C6927B500522691 /* U7.gif */,
-				0FCC1DCF1D05F4130005D9D4 /* 150.gif */,
-				0FEBAC8E1C6927AF00522691 /* U8.gif */,
+				D564C11E1F7EF5B90041667C /* U8.gif */,
 			);
 			name = MVGIcons;
 			sourceTree = "<group>";
@@ -444,7 +440,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = H6M95H3ZFA;
@@ -499,7 +495,6 @@
 				7ED5C475121CF765006A25C7 /* link_roomfinder.png in Resources */,
 				7ED5C476121CF765006A25C7 /* link_tumonline.png in Resources */,
 				390464C5121F33D700D62C52 /* U1.gif in Resources */,
-				0FEBAC911C6927B500522691 /* U7.gif in Resources */,
 				390464C6121F33D700D62C52 /* U2.gif in Resources */,
 				390464C7121F33D700D62C52 /* U3.gif in Resources */,
 				390464C8121F33D700D62C52 /* U4.gif in Resources */,
@@ -510,7 +505,6 @@
 				0F9C687B1C681F9B00F4A696 /* FachschaftMPI.entitlements in Resources */,
 				3904659E121F451000D62C52 /* N27.gif in Resources */,
 				390465A5121F454B00D62C52 /* 23.gif in Resources */,
-				0FCC1DD01D05F4130005D9D4 /* 150.gif in Resources */,
 				39BFD2A812201C3300155D97 /* 27.gif in Resources */,
 				3918774A125FF610005F24ED /* FSMPIMensaCell.xib in Resources */,
 				39FCBC8C13194E6C00768622 /* FSMPINewsCell.xib in Resources */,
@@ -520,7 +514,6 @@
 				3907E10D13699664000E9247 /* link_matum.png in Resources */,
 				3907E10E13699664000E9247 /* link_phtum.png in Resources */,
 				3907E1101369966C000E9247 /* link_grundstudium.png in Resources */,
-				0FEBAC8F1C6927AF00522691 /* U8.gif in Resources */,
 				3907E1121369971D000E9247 /* link_studentenwerk.png in Resources */,
 				390DB292137D3BD600E2B805 /* canteens.plist in Resources */,
 				390DB295137D503600E2B805 /* canteen_loske.png in Resources */,
@@ -534,7 +527,6 @@
 				396DF2FA13CF6C5D00513C88 /* FSMPIMensaView.xib in Resources */,
 				396DF2FB13CF6C5D00513C88 /* FSMPINewsView.xib in Resources */,
 				396DF2FC13CF6C5D00513C88 /* FSMPIPubTransportCell.xib in Resources */,
-				0FB89C0C1D02E8B0000E25E4 /* 28.gif in Resources */,
 				396DF2FD13CF6C5D00513C88 /* MainWindow.xib in Resources */,
 				39FE6F261611019900F5E7DA /* Default-568h@2x.png in Resources */,
 			);
@@ -697,11 +689,20 @@
 		395B97A31497A1BC00DC9F61 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
@@ -720,7 +721,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
@@ -758,11 +759,20 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthias Schwab (E9CJWU22ZR)";
@@ -781,7 +791,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lxml2";
@@ -794,11 +804,20 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthias Schwab (E9CJWU22ZR)";
@@ -816,7 +835,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-lxml2";
